@@ -12,11 +12,14 @@
   </header>
   <main>
     <form class="registration" action="index.html" method="post">
-      <p>Name
-        <input type="text" name="firstname" placeholder="First Name" />
-        <input type="text" name="lastname" placeholder="Last Name" />
-      </p>
-      <p>Birth Date</p>
+      <fieldset>
+        <legend>Profile</legend>
+        <label>Name:
+          <input type="text" name="firstname" placeholder="First Name" />
+          <input type="text" name="lastname" placeholder="Last Name" />
+        </label>
+<!--Need to add labels for day, month, and year options-->
+        <p>Birth Date:</p>
       <select name="dob-month" id="dob-month">
     <option value="">Month</option>
     <option value="01">January</option>
@@ -31,7 +34,7 @@
     <option value="10">October</option>
     <option value="11">November</option>
     <option value="12">December</option>
-  </select>
+      </select>
 
       <select name="dob-dy" id="dob-day">
       <option value="">Day</option>
@@ -66,7 +69,7 @@
       <option value="29">29</option>
       <option value="30">30</option>
       <option value="31">31</option>
-    </select>
+      </select>
 
       <select name="dob-year" id="dob-year">
       <option value="">Year</option>
@@ -185,29 +188,43 @@
       <option value="1903">1903</option>
       <option value="1901">1901</option>
       <option value="1900">1900</option>
-    </select>
-      <p>E-mail</p>
-      <input type="email" name="email" placeholder="myname@example.com">
-      <p>Phone Number</p>
+      </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Details</legend>
+        <label>Phone Number:
       <!--Using size attribute temporarily until CSS is added-->
       <input type="tel" name="areacode" maxlength="3" size="3" placeholder="222">-
-      <input type="tel" name="phonenumber" maxlength="7" size="8" placeholder="555-1234">
-      <p>What day(s) can you volunteer?</p>
-      <input type="checkbox" name="friday" value="friday" />Friday
-      <input type="checkbox" name="Saturday" value="saturday" />Saturday
-      <input type="checkbox" name="Sunday" value="sunday" />Sunday
+      <input type="tel" name="phonenumber" maxlength="7" size="8" placeholder="555-1234"></label>
+        <label> E-mail:
+      <input type="email" name="email" placeholder="myname@example.com"> </label>
+      </fieldset>
 
-      <p>When are you volunteering? (Choose One)</p>
-      <input type="radio" name="time" value="Morning" checked="checked"/>Morning
-      <input type="radio" name="time" value="Afternoon" />Afternoon
-      <input type="radio" name="time" value="Evening" />Evening
+      <fieldset>
+        <legend>Volunteer Details</legend>
+        <p>What day(s) can you volunteer?</p>
+        <input type="checkbox" name="friday" value="friday"/>
+        <label for="friday">Friday</label>
+        <input type="checkbox" name="Saturday" value="saturday"/>
+        <label for="saturday">Saturday</label>
+        <input type="checkbox" name="Sunday" value="sunday"/>
+        <label for="sunday">Sunday</label>
 
-      <p>What position(s) are you insterested in?</p>
-      <p>
-<!--Using Small attribute temporarily until CSS is added-->
-        <small>(Hold down control key for PC or command key for Mac to select multiple.)</small>
-      </p>
-      <select class="position" name="position" multiple="multiple" size="5">
+        <p>When are you volunteering? (Choose One)</p>
+        <input type="radio" name="time" value="Morning" checked="checked" />
+        <label for="morning">Morning</label>
+        <input type="radio" name="time" value="Afternoon" />
+        <label for="afternoon">Afternoon</label>
+        <input type="radio" name="time" value="Evening" />
+        <label for="evening">Evening</label>
+
+        <p>What position(s) are you insterested in?</p>
+        <p>
+          <!--Using Small attribute temporarily until CSS is added-->
+          <small>(Hold down control key for PC or command key for Mac to select multiple.)</small>
+        </p>
+        <select class="position" name="position" multiple="multiple" size="5">
     <option value="greeter" selected="selected">Greeter</option>
     <option value="design">Design</option>
     <option value="reception">Reception</option>
@@ -216,17 +233,17 @@
     <option value="leader">Leader</option>
   </select>
 
-  <p>Upload Your Application Form:</p>
-<input type="file" name="application"/> <br/>
-<input type="submit" value="Upload">
+        <p>Upload Your Application Form:</p>
+        <input type="file" name="application"/><br/>
+        <input type="submit" value="Upload">
+      </fieldset>
 
-  <p>Additional Comments</p>
-  <textarea name="comments" rows="4" cols="60" placeholder></textarea>
-<br/>
-<input type="submit" name="submit" value="Submit">
+      <p>Additional Comments</p>
+      <textarea name="comments" rows="4" cols="60" placeholder></textarea>
+      <br/>
+      <input type="submit" name="submit" value="Submit">
     </form>
   </main>
   <footer></footer>
 </body>
-
 </html>
