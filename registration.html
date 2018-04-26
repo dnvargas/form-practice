@@ -212,26 +212,24 @@
         <label for="sunday">Sunday</label>
 
         <p>When are you volunteering? (Choose One)</p>
-        <input type="radio" name="time" value="Morning" checked="checked" />
+        <input type="radio" name="time" value="Morning" checked="checked"/>
         <label for="morning">Morning</label>
-        <input type="radio" name="time" value="Afternoon" />
+        <input type="radio" name="time" value="Afternoon"/>
         <label for="afternoon">Afternoon</label>
-        <input type="radio" name="time" value="Evening" />
+        <input type="radio" name="time" value="Evening"/>
         <label for="evening">Evening</label>
 
-        <p>What position(s) are you insterested in?</p>
-        <p>
+        <p><label>What position(s) are you insterested in?</label>
           <!--Using Small attribute temporarily until CSS is added-->
-          <small>(Hold down control key for PC or command key for Mac to select multiple.)</small>
-        </p>
-        <select class="position" name="position" multiple="multiple" size="5">
+        <p><small>(Hold down control key for PC or command key for Mac to select multiple.)</small></p>
+    <select class="position" name="position" multiple="multiple" size="5">
     <option value="greeter" selected="selected">Greeter</option>
     <option value="design">Design</option>
     <option value="reception">Reception</option>
     <option value="driver" selected="selected">Driver</option>
     <option value="setup">Setup</option>
     <option value="leader">Leader</option>
-  </select>
+  </select></p>
 
         <p>Upload Your Application Form:</p>
         <input type="file" name="application"/><br/>
